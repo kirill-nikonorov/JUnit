@@ -1,0 +1,44 @@
+TestRunner.java:1: error: package org.junit.runner does not exist
+import org.junit.runner.JUnitCore;
+                       ^
+TestRunner.java:2: error: package org.junit.runner does not exist
+import org.junit.runner.Result;
+                       ^
+TestRunner.java:3: error: package org.junit.runner.notification does not exist
+import org.junit.runner.notification.Failure;
+                                    ^
+TestRunner.java:7: error: cannot find symbol
+      Result result = JUnitCore.runClasses(TestJunit.class);
+      ^
+  symbol:   class Result
+  location: class TestRunner
+.\TestJunit.java:1: error: package org.junit does not exist
+import org.junit.Test;
+                ^
+.\TestJunit.java:2: error: package org.junit does not exist
+import static org.junit.Assert.assertEquals;
+                       ^
+.\TestJunit.java:2: error: static import only from classes and interfaces
+import static org.junit.Assert.assertEquals;
+^
+.\TestJunit.java:5: error: cannot find symbol
+   @Test
+    ^
+  symbol:   class Test
+  location: class TestJunit
+TestRunner.java:7: error: cannot find symbol
+      Result result = JUnitCore.runClasses(TestJunit.class);
+                      ^
+  symbol:   variable JUnitCore
+  location: class TestRunner
+TestRunner.java:9: error: cannot find symbol
+      for (Failure failure : result.getFailures()) {
+           ^
+  symbol:   class Failure
+  location: class TestRunner
+.\TestJunit.java:9: error: cannot find symbol
+      assertEquals("Junit is working fine",str);
+      ^
+  symbol:   method assertEquals(String,String)
+  location: class TestJunit
+11 errors
